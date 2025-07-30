@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lisa’s Memory Lane 💖</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0 0%, #fff0f7 100%);
+      color: #5a2a45;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Container */
+    .container {
+      max-width: 720px;
+      margin: 2.5rem auto;
+      background: rgba(255, 182, 193, 0.15);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(255, 182, 193, 0.25);
+      padding: 3rem 2.5rem;
+      position: relative;
+      z-index: 10;
+      backdrop-filter: saturate(180%) blur(8px);
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+    }
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      color: #cc3c7e;
+      margin: 0 0 0.25rem;
+      letter-spacing: 0.04em;
+      text-shadow: 0 3px 6px rgba(204, 60, 126, 0.3);
+    }
+    header p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #9c466c;
+      margin: 0;
+      user-select: none;
+    }
+    /* Quote */
+    blockquote {
+      margin: 2.5rem 0;
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      border-left: 5px solid #f3a6c4;
+      padding-left: 1.2rem;
+      color: #9c466c;
+      background: #fff0f7;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(243, 166, 196, 0.3);
+      user-select: none;
+    }
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f8c5d7;
+      color: #621f3a;
+      font-weight: 700;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(248, 197, 215, 0.5);
+      transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+      user-select: none;
+      text-shadow: 0 1px 1px rgba(255 255 255 / 0.6);
+      text-decoration: none;
+    }
+    .btn:hover, .btn:focus {
+      background: #eab0c8;
+      box-shadow: 0 12px 30px rgba(234, 176, 200, 0.7);
+      transform: translateY(-3px);
+      outline: none;
+    }
+    /* Arrow icon */
+    .btn svg {
+      width: 22px;
+      height: 22px;
+      stroke: #621f3a;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s ease;
+    }
+    .btn.arrow:hover svg {
+      transform: translateX(6px);
+    }
+    /* Smaller padding for arrow-only button */
+    .btn.arrow {
+      padding: 0.85rem 1.2rem;
+    }
+    /* Floating clouds container */
+    .floating-clouds {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      overflow: visible;
+      user-select: none;
+    }
+    /* Minimal stylized clouds with subtle animation */
+    .cloud {
+      position: absolute;
+      background: #ffdbeb;
+      border-radius: 50% / 40%;
+      opacity: 0.16;
+      filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.4));
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      will-change: transform;
+      box-shadow:
+        35px 0 0 0 #ffdbeb,
+        60px 10px 0 0 #ffdbeb,
+        90px 0 0 0 #ffdbeb;
+    }
+    .cloud1 {
+      width: 130px;
+      height: 75px;
+      top: 10vh;
+      animation-name: driftRight;
+      animation-duration: 85s;
+      animation-delay: 0s;
+      left: -150px;
+    }
+    .cloud2 {
+      width: 85px;
+      height: 50px;
+      top: 45vh;
+      animation-name: driftRight;
+      animation-duration: 120s;
+      animation-delay: 30s;
+      left: -120px;
+      box-shadow:
+        25px 0 0 0 #ffdbeb,
+        45px 7px 0 0 #ffdbeb,
+        70px 0 0 0 #ffdbeb;
+      opacity: 0.12;
+    }
+    .cloud3 {
+      width: 155px;
+      height: 90px;
+      top: 75vh;
+      animation-name: driftLeft;
+      animation-duration: 100s;
+      animation-delay: 15s;
+      left: 100vw;
+      opacity: 0.10;
+      box-shadow:
+        45px 0 0 0 #ffdbeb,
+        80px 12px 0 0 #ffdbeb,
+        120px 0 0 0 #ffdbeb;
+    }
+    @keyframes driftRight {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(120vw); }
+    }
+    @keyframes driftLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-120vw); }
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #a35e7a;
+      margin: 1rem 0 1.5rem;
+      user-select: none;
+      font-style: italic;
+    }
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        margin: 1.5rem 1rem;
+        padding: 2rem 1.5rem;
+      }
+      header h1 {
+        font-size: 2.4rem;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.6rem;
+      }
+      .btn.arrow {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-clouds" aria-hidden="true">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <main class="container" role="main">
+    <header>
+      <h1>Lisa’s Memory Lane 💖</h1>
+      <p>Because best friends deserve the sweetest memories.</p>
+    </header>
+
+    <blockquote>
+      “A best friend is like a heart with a thousand apple-shaped 💖 beats — always there, always loving.”
+    </blockquote>
+
+    <nav class="btn-group" aria-label="Navigation buttons">
+      <a href="letter.html" class="btn" role="button" aria-label="Go to letters page">
+        Click me
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </a>
+      <a href="gallery.html" class="btn arrow" role="button" aria-label="Go to gallery page">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Made with ❤️ for Lisa, by her best friend.
+  </footer>
+
+  <script>
+    // Store and update visit time quietly
+    const visitKey = 'lisaVisitTimestamp';
+    const nowISO = new Date().toISOString();
+    const lastVisit = localStorage.getItem(visitKey);
+    if (lastVisit) {
+      console.log(`Lisa last visited on: ${lastVisit}`);
+    }
+    localStorage.setItem(visitKey, nowISO);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

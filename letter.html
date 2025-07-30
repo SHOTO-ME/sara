@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<title>Letters for Lisa 💖</title>
+<style>
+  body {
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    color: #a02040;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Envelope wrapper */
+  .envelope-wrapper {
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  .envelope-wrapper:focus-visible {
+    outline: 3px solid #ff69b4;
+    outline-offset: 3px;
+  }
+  .envelope-wrapper:hover {
+    box-shadow: 0 0 15px 5px rgba(255,20,147,0.3);
+    z-index: 2;
+  }
+
+  /* The envelope image */
+  .envelope {
+    width: 180px;
+    height: 200px;
+    background: url('https://png.pngtree.com/png-clipart/20230527/ourlarge/pngtree-cute-pink-envelope-for-valentines-day-png-image_7111201.png') no-repeat center/contain;
+    border-radius: 18px;
+    user-select: none;
+    position: relative;
+    margin: 0 auto;
+    transition: none;
+  }
+
+  /* Flap text on envelope */
+  .flap-text {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #a02040;
+    line-height: 1.3;
+    white-space: pre-line;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Expanded letter style */
+  .expanded-letter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 600px;
+    height: 70vh;
+    background: url('https://www.activityshelter.com/wp-content/uploads/2016/03/lined-paper-for-writing-pink-heart.jpg') no-repeat center/cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(160, 32, 64, 0.5);
+    transform: translate(-50%, -50%);
+    padding: 40px 50px 50px 50px;
+    overflow-y: auto;
+    color: #a02040;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    z-index: 1000;
+  }
+  .expanded-letter p {
+    margin: 0;
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #a02040;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+  }
+  .close-btn:hover {
+    color: #ff1493;
+  }
+
+  /* Hearts graffiti around letter */
+  .hearts {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 2.5rem;
+    color: #ff69b4;
+    display: flex;
+    gap: 12px;
+    z-index: 1100;
+    animation: floatHearts 3s ease-in-out infinite;
+  }
+  @keyframes floatHearts {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+  }
+</style>
+</head>
+<body>
+
+<h1>Letters for Lisa ࣪ ִֶָ ☾</h1>
+
+<div class="container" role="list" aria-label="Letters for Lisa">
+
+  <!-- Envelope 1 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you are sad envelope" data-index="0">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you are sad<br>࣪ ִֶָ ☾</div>
+    </div>
+  </div>
+
+  <!-- Envelope 2 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you miss home envelope" data-index="1">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you miss home<br>☽ 𓂀 𓆃</div>
+    </div>
+  </div>
+
+  <!-- Envelope 3 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you are happy envelope" data-index="2">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you are happy<br>𓃠 ✧ 𓂅</div>
+    </div>
+  </div>
+
+  <!-- Envelope 4 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you need a hug envelope" data-index="3">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you need a hug<br>𓆉 ִֶָ ☽</div>
+    </div>
+  </div>
+
+  <!-- Envelope 5 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to smile envelope" data-index="4">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to smile<br>𓂀 ✧ ☾</div>
+    </div>
+  </div>
+
+  <!-- Envelope 6 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you feel brave envelope" data-index="5">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you feel brave<br>☽ 𓆉 𓃠</div>
+    </div>
+  </div>
+
+  <!-- Envelope 7 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to dream envelope" data-index="6">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to dream<br>𓂅 𓃠 ִֶָ</div>
+    </div>
+  </div>
+
+  <!-- Envelope 8 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you need peace envelope" data-index="7">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you need peace<br>𓂀 ☾ ✧</div>
+    </div>
+  </div>
+
+  <!-- Envelope 9 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you feel strong envelope" data-index="8">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you feel strong<br>𓆃 ☽ 𓃠</div>
+    </div>
+  </div>
+
+  <!-- Envelope 10 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to laugh envelope" data-index="9">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to laugh<br>𓂅 ☾ 𓆉</div>
+    </div>
+  </div>
+
+  <!-- Envelope 11 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you need courage envelope" data-index="10">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you need courage<br>☽ 𓃠 ✧</div>
+    </div>
+  </div>
+
+  <!-- Envelope 12 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to relax envelope" data-index="11">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to relax<br>𓂀 𓆉 ☾</div>
+    </div>
+  </div>
+
+  <!-- Envelope 13 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you feel proud envelope" data-index="12">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you feel proud<br>𓃠 𓂅 ☽</div>
+    </div>
+  </div>
+
+  <!-- Envelope 14 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you feel adventurous envelope" data-index="13">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you feel adventurous<br>𓆉 𓃠 𓂀</div>
+    </div>
+  </div>
+
+  <!-- Envelope 15 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to be inspired envelope" data-index="14">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want inspiration<br>☽ 𓂅 ✧</div>
+    </div>
+  </div>
+
+  <!-- Envelope 16 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to remember me envelope" data-index="15">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to<br>remember me<br>𓂀 ☾ 𓆉</div>
+    </div>
+  </div>
+
+  <!-- Envelope 17 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want motivation envelope" data-index="16">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you need motivation<br>𓃠 ☽ 𓂅</div>
+    </div>
+  </div>
+
+  <!-- Envelope 18 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you feel lonely envelope" data-index="17">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you feel lonely<br>𓂀 𓃠 ☾</div>
+    </div>
+  </div>
+
+  <!-- Envelope 19 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you want to celebrate envelope" data-index="18">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you want to celebrate<br>𓆉 ☽ 𓂅</div>
+    </div>
+  </div>
+
+  <!-- Envelope 20 -->
+  <div class="envelope-wrapper" tabindex="0" role="listitem" aria-label="Open when you need a friend envelope" data-index="19">
+    <div class="envelope">
+      <div class="flap-text">Open when<br>you need a friend<br>☾ 𓃠 𓆉</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Letter popup container -->
+<div id="letterPopup" class="expanded-letter" role="dialog" aria-modal="true" aria-labelledby="letterTitle" style="display:none;">
+  <button class="close-btn" aria-label="Close letter">&times;</button>
+  <p id="letterContent"></p>
+</div>
+
+<!-- Floating hearts -->
+<div class="hearts" aria-hidden="true">💕💖💞💓</div>
+
+<script>
+  const lettersContent = [
+    `Hey Lisa! I know sometimes the world feels heavy and colors fade, but remember, every time you feel sad, it’s just a little cloud passing. You have this incredible light inside you that can brighten even the gloomiest days. When you open this, imagine me giving you the biggest, warmest hug — squeezing all the sadness out and filling you with love and sparkles. You’re never alone — I’m always with you in spirit, cheering you on. 💖🌈 Stay strong, beautiful soul.`,
+    
+    `Lisa, missing home can feel like a tug on your heartstrings. But know that every corner of your home holds a treasure of memories — the laughter, the smell of your favorite food, the little moments we shared. Let this letter be your cozy blanket, wrapping you up with all the love and warmth waiting for you there. Soon enough, you’ll be back to those hugs and silly talks. Until then, hold on tight and keep shining bright! 🌸🏡`,
+    
+    `Happy days are like little fireworks in our lives — bright, beautiful, and full of joy. When you’re feeling this happy, let yourself dance, laugh loudly, and soak it all in. I’m so proud of you, Lisa! You deserve all the smiles and sunshine. Remember to capture this feeling, bookmark it in your heart, and call me so we can celebrate together soon! 🎉✨`,
+    
+    `Need a hug? Well, imagine this letter is wrapping you up in the softest, coziest hug ever. No matter how far I am, I’m sending you all the warmth and comfort through these words. You’re my brave, wonderful bestie, and hugs from me are always just a letter away. So, squeeze this close when you want to feel loved and cared for. 🤗💕`,
+    
+    `Smile, Lisa! Even on the days when it feels hard, remember that your smile is a magic wand — it can brighten your day and everyone else's too. So whenever you open this, put on your best grin and think of all the goofy moments we’ve shared. I promise, the world looks better when you smile. Keep shining, queen! 😄👑`,
+    
+    `Feeling brave? I see you. I know life sometimes asks us to be stronger than we feel, but inside you is this fierce heart that never quits. Every challenge you face is a victory in disguise. This letter is your little cheerleader reminding you of your power and courage. You’re unstoppable, Lisa. Go show the world what you’ve got! 💪🔥`,
+    
+    `Close your eyes and dream big. This letter is your permission slip to imagine the wildest, most amazing adventures. Dream about the places you’ll go, the people you’ll meet, and the stories you’ll tell. I believe in your dreams as much as I believe in you. So dream on, my star! 🌠💫`,
+    
+    `When the noise of the world gets too loud, take a breath, open this letter, and find your peace. Picture a calm lake at sunrise, gentle waves whispering, and all worries melting away. You deserve moments of stillness and calm, and I hope this letter brings you exactly that. Peace and love, always. 🌿🕊️`,
+    
+    `You’re strong beyond words, Lisa. Life throws curveballs, but you catch them with grace and courage. This letter is a reminder that no matter how tough it gets, you’ve got the heart of a warrior and the soul of a champion. Keep standing tall and proud — you inspire me every day. 💖🏆`,
+    
+    `Laugh, laugh, laugh! Let joy bubble up and overflow, because nothing beats the sound of your laughter. When you open this letter, think of all our silly inside jokes and funny moments. Life is better when you laugh — it’s medicine for the soul. Can’t wait to laugh with you again soon! 😂🌸`,
+    
+    `Courage isn’t about not being scared, it’s about moving forward anyway. I see the courage in you every day, and it blows me away. Let this letter remind you that being brave means you’re already winning. Keep pushing forward, and I’m right here cheering the loudest! 🌟💖`,
+    
+    `Time to relax, beautiful soul. Take this letter as your invitation to breathe deep, chill out, and treat yourself with kindness. Whether it’s a bubble bath, a favorite song, or just quiet time, you deserve all the peace. Can’t wait to hear about your little self-care moments! 🌸🛁`,
+    
+    `Feeling proud of yourself? You should be! Every little step you take, every hurdle you jump, is a reason to celebrate. You’re growing, glowing, and becoming more amazing every day. Hold this letter close when you need a reminder of how far you’ve come. I’m your biggest fan! 🎉💫`,
+    
+    `Adventure awaits, Lisa! Life is a grand journey full of twists and turns, and you’re the fearless explorer. This letter is a passport to wild dreams and new horizons. Keep your heart open and your feet ready for the next exciting step. I’m here, ready to hear all about it! 🌍✨`,
+    
+    `Need a little spark of inspiration? Here it is! You are so full of creativity, light, and magic. Let this letter be a spark that lights up your imagination and fills your heart with ideas and dreams. You’re made for amazing things, don’t forget that. Keep shining bright! 💡🌟`,
+    
+    `Whenever you want to remember me, open this letter and think of all our crazy, beautiful moments. From silly laughs to serious talks, I’m always right there with you. Distance can’t break the bond we have. I love you forever and always. 💞👭`,
+    
+    `Feeling like you need motivation? I’m sending you an energy boost through these words! You are capable, strong, and unstoppable. When life feels tough, remember why you started and all the dreams you hold. Keep moving forward — I’m with you every step. 💪🌈`,
+    
+    `Lonely days happen to the best of us. When you feel alone, open this letter and know I’m wrapping you in my heart. You’re loved beyond words and never truly alone. I’m just a thought away. Sending you all the warm fuzzy vibes. 🧸💖`,
+    
+    `Time to celebrate YOU! Every accomplishment, big or small, is worth a party. This letter is your personal cheer squad shouting “YAY, Lisa!” Celebrate your wins, your effort, and the amazing person you are. I can’t wait to celebrate with you in person soon! 🎊🎈`,
+    
+    `Need a friend? Here I am — in words and love. This letter holds my promise to always be here, to listen, to laugh, and to love you no matter what. You’ve got a lifelong bestie in me. Open this whenever you want a friend’s hug. 🤗💕`
+  ];
+
+  const envelopes = document.querySelectorAll('.envelope-wrapper');
+  const letterPopup = document.getElementById('letterPopup');
+  const letterContent = document.getElementById('letterContent');
+  const closeBtn = letterPopup.querySelector('.close-btn');
+
+  envelopes.forEach(envelope => {
+    envelope.addEventListener('click', () => {
+      const index = parseInt(envelope.dataset.index, 10);
+      openLetter(index);
+    });
+    envelope.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const index = parseInt(envelope.dataset.index, 10);
+        openLetter(index);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    letterPopup.style.display = 'none';
+    letterContent.textContent = '';
+    // Return focus to the last opened envelope for accessibility
+    if (lastFocusedEnvelope) lastFocusedEnvelope.focus();
+  });
+
+  // Close letter on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && letterPopup.style.display === 'block') {
+      closeBtn.click();
+    }
+  });
+
+  let lastFocusedEnvelope = null;
+
+  function openLetter(index) {
+    lastFocusedEnvelope = envelopes[index];
+    letterContent.textContent = lettersContent[index];
+    letterPopup.style.display = 'block';
+    closeBtn.focus();
+  }
+</script>
+
+</body>
+</html>
+
+
